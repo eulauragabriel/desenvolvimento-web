@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: auto;
+    width: 70%;
+}
+
+
+
+#img-fundo{
+    background-image: url(fundo.png);
+}
+
+#img-fundo2{
+    background-image: url(fundo2.png);
+}
+
+.link{
+    padding-top: 45px;
+    float: right;
+}
+
+img{
+    padding-top: 22px;
+}
+
+
+p{text-align: justify;}
+
+p.f{text-align: center;}
