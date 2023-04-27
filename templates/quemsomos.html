@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quemsomos</title>
 </head>
 <body id="img-fundo2"> 
-    <!-- menu -->
+    {% extends 'base.html' %}
+
+    {% block content %}
     <div>
-        <img src="logo.png" alt="logo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="logo">
         <div class="link">
-            <a href="home.html" target="_self">Home</a> |
-            <a href="quemsomos.html" target="_self">Quem Somos</a> |
-            <a href="contato.html" target="_self">Contato</a>
+            <a href="{{ url_for('home') }}" target="_self">Home</a> |
+            <a href="{{ url_for('quemsomos') }}" target="_self">Quem Somos</a> |
+            <a href="{{ url_for('contato')}}" target="_self">Contato</a>
         </div>
     </div>
     <h1>Quem somos</h1>
@@ -32,5 +34,6 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vel nisi quas corrupti magnam ducimus cupiditate qui provident tenetur veritatis eligendi, aspernatur velit quos autem adipisci, perferendis error numquam. Neque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat fugiat saepe autem deleniti, soluta beatae quod eveniet odit quam illum quisquam et sunt eius, optio mollitia ducimus quidem sint. Aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore minus nostrum sequi, modi ipsam maiores deleniti aspernatur ratione blanditiis ad fuga ipsum quibusdam officia beatae fugit, voluptate libero possimus aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam assumenda sit nisi placeat ducimus, sunt amet, pariatur ab, esse ut impedit ratione! Nemo officiis aperiam accusamus est molestias repudiandae magnam!</p>
 
     <p class="f"> <b> Todos os direitos reservados.</b></p>
+    {% endblock %}
 </body>
 </html>
