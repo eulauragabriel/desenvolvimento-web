@@ -7,8 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNES</title>
 </head>
+
+{% block head%}
+ <div>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="logo">
+    <div class="link">
+        <a href="/home">Home</a> |
+        <a href="/quemsomos">Quem somos</a> |
+        <a href="/contato">Contato</a> |
+        <a href="/users">Usuários</a>
+    </div>
+</div>
+{% endblock %}
+
 <body>
     {% block content %}
     {% endblock %}
 </body>
+
+<div>
+    <p class="f"> <b> Todos os direitos reservados.</b></p>
+</div>
+
 </html>

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body id="img-fundo2">
+    <table id="users">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Assunto</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in userDetails %}
+            <tr>
+                <td>{{user[0]}}</td>
+                <td>{{user[1]}}</td>
+                <td>{{user[2]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+<br>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script> 
+<br>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<br>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<br>
+
+<script>
+    $(document).ready(function () {
+        $('#users').DataTable({
+            "language": {
+                "lengthMenu": "Mostrando_MENU_registros por página",
+                "zeroRecords": "Nada encontrado",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "Nenhum registro disponível",
+                "infoFiltered": "(filtrando de _MAX_ registros no total)"
+            }
+        })
+    })
+</script>
+{% endblock %}

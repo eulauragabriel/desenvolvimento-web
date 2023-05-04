@@ -11,33 +11,23 @@
     {% extends 'base.html' %}
 
     {% block content %}
-    <div>
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="logo">
-        <div class="link">
-            <a href="{{ url_for('home') }}" target="_self">Home</a> |
-            <a href="{{ url_for('quemsomos') }}" target="_self">Quem Somos</a> |
-            <a href="{{ url_for('contato')}}" target="_self">Contato</a>
-        </div>
-    </div>
 
 
     <h1>Entre em contato</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, alias odio fuga veniam voluptatum corrupti.</p><hr>
     <form method="post" action="/contato">
         <label for="">Seu e-mail:</label><br>
-        <input type="text" name="email" placeholder="Digite seu e-mail..."><br>
+        <input type="text" name="email"><br>
 
         <label for="">Assunto:</label><br>
-        <input type="text" name="assunto" placeholder="Digite o assunto..."><br>
+        <input type="text" name="assunto"><br>
 
         <label for="">Descrição:</label><br>
-        <textarea name="descricao" placeholder="Digite a descrição..."></textarea><br>
+        <textarea name="descricao"></textarea><br>
         <input type="submit" value="Enviar">
     </form>
 
 
-
-    <p class="f"><b>Todos os direitos reservados.</b></p>
     {% endblock %}
 </body>
 </html>

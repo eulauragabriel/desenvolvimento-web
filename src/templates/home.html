@@ -12,14 +12,6 @@
 
     {% block content %}
 
-    <div>
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="logo">
-        <div class="link">
-            <a href="{{ url_for('home') }}" target="_self">Home</a> |
-            <a href="{{ url_for('quemsomos') }}" target="_self">Quem Somos</a> |
-            <a href="{{ url_for('contato')}}" target="_self">Contato</a>
-        </div>
-    </div>
     
     <!--corpo da página img-->
     <div id="img-capa">
@@ -34,8 +26,6 @@
         </p>
 
 
-        <p class="f"><b>Todos os direitos reservados.</b></p>
-    </div>
     {% endblock %}
 </body>
 </html>

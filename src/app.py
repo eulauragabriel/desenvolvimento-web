@@ -11,7 +11,7 @@ app.config["MYSQL_DB"] = "fatec"
 mysql = MySQL(app)
 
 
-@app.route("/")
+@app.route("/home")
 def home():
     return render_template("home.html")
 
@@ -31,7 +31,7 @@ def contato():
         cur = mysql.connection.cursor()
         cur.execute(
             "INSERT INTO contato(email, assunto, descricao)VALUES(%s, %s, %s)",
-            (email, assunto, descricao)
+            (email, assunto, descricao),
         )
 
         mysql.connection.commit()
@@ -40,6 +40,18 @@ def contato():
 
         return "Cadastrado com sucesso!"
     return render_template("contato.html")
+
+
+@app.route("/users")
+def users():
+    cur = mysql.connection.cursor()
+
+    num_users = cur.execute("SELECT * FROM contato")
+
+    if num_users > 0:
+        userDetails = cur.fetchall()
+
+        return render_template("users.html", userDetails=userDetails)
 
 
 if __name__ == "__main__":

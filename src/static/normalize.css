@@ -27,3 +27,17 @@ img{
 p{text-align: justify;}
 
 p.f{text-align: center;}
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+  
