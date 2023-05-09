@@ -15,6 +15,9 @@ mysql = MySQL(app)
 def home():
     return render_template("home.html")
 
+@app.route("/home")
+def home2():
+    return render_template("home.html")
 
 @app.route("/quemsomos")
 def quemsomos():
